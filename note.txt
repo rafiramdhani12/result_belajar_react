@@ -1,0 +1,3 @@
+di dalam  redux ada namanya dispatch ya itu event handler pada redux 
+ada store , reducer , store , dan ui
+dari ui ke dispatch dispatch mengirimkan payload yg nantinya terkirim ke dalam store , store adalah tempat untuk menyimpan state ,store akan cek ke reducer reducer sendiri yg akan memilah payload yg dikirimkan oleh ui itu sendiri di dalam reducer akan menjalankan fungsi 
