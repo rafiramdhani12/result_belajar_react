@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import {useContext, useEffect, useRef, useState} from "react";
 import {useSelector} from "react-redux";
@@ -6,6 +7,7 @@ import {
   useTotalPrice,
   useTotalPriceDispatch,
 } from "../../context/TotalPriceContext";
+import Button from "../Button";
 
 const TableProduct = (props) => {
   const {products} = props;
@@ -44,6 +46,13 @@ const TableProduct = (props) => {
       totalPriceRef.current.style.display = "none";
     }
   }, [cart, products]);
+
+  const HandleRemove = () => {
+    localStorage.removeItem("cart");
+    alert(
+      "seharusnya memakai useState dan hooks lainya agar terlihat lebih dinamis dan tidak perlu di restart ketika sudah menghapus"
+    );
+  };
 
   return (
     <>
@@ -105,6 +114,7 @@ const TableProduct = (props) => {
           </tr>
         </tbody>
       </table>
+      <Button onClick={HandleRemove}>Hapus Belanjaan</Button>
     </>
   );
 };

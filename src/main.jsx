@@ -14,6 +14,7 @@ import {Provider} from "react-redux";
 import store from "./redux/store.js";
 import DarkModeContextProvider from "./context/DarkMode";
 import {TotalPriceProvider} from "./context/TotalPriceContext.jsx";
+import HomePage from "./pages/HomePage.jsx";
 // import Navbar from "./components/layout/Navbar.jsx";
 
 // kalo udh kaya gini yg di render itu yg ada di router bukan app lagi tadi ada kendala style posisi nya berubah jadi taro style nya di layout
@@ -21,7 +22,7 @@ import {TotalPriceProvider} from "./context/TotalPriceContext.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
+    element: <HomePage />,
     errorElement: <NotFound />,
   },
   {
